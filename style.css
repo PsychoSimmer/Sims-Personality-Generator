@@ -1,0 +1,31 @@
+.container {
+width:600px;
+background-color:greenyellow;
+margin:100px auto;
+font-family: 'Oxygen', sans-serif;
+}
+
+.questioncontainer input {
+    display:none; 
+}
+
+.questioncontainer input:checked + label {
+background-color:rgb(22, 126, 31);
+}
+
+.questioncontainer{
+    display:flex; 
+
+}
+
+label{
+    margin:10px;
+}
+
+label:hover {
+    background-color: rgb(87, 182, 87);
+    cursor:pointer
+}
+
+h1 {    text-align: center;
+}
