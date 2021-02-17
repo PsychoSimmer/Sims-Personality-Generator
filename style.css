@@ -32,7 +32,7 @@ label:hover {
 h1 {    text-align: center;
 }
 
-.Nametextbox {
+.nametextbox {
     margin-right:40px;
 }
 
@@ -58,4 +58,8 @@ h1 {    text-align: center;
         padding: 4px 25px;
         border-radius: 38px;
         cursor: pointer;
+    }
+
+    .results{
+        display:none
     }
