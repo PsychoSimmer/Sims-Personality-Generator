@@ -13,16 +13,20 @@ function generate() {
     extrovert = "";
     selfdoubt = "";
     selfesteem = "";
+    normietrait1 = "";
+    normietrait2 = "";
 
     //CALL FUNCTION of process each q
     Q1()
     Q2()
     Q3()
     Q4()
+    calculatefavcolor()
+    calculatefavanimal()
 
     //put results on page
     document.querySelector(".inputtedname").innerText = document.querySelector(".nametextbox").value + "'s Personality Evaluation"
-    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + introvert + extrovert + selfdoubt + selfesteem;
+    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + normietrait1 + introvert + extrovert + selfdoubt + selfesteem + normietrait2 + "<b>Favorite Color: </b>" + color + "<br><b>Favorite Animal: </b>" + animal + "<br><b>Desired Room Themes: </b>" + calculatedesiredroomthemes() + "  &  " + calculatedesiredroomthemes();
 
 }
 
@@ -34,6 +38,8 @@ var introvert;
 var extrovert;
 var selfdoubt;
 var selfesteem;
+var color;
+var animal;
 
 //function for Q1
 function Q1() {
@@ -84,6 +90,28 @@ function Q2() {
 
         }
     }
+    if (Q2A === "2") {
+        var normieroll1 = Math.random()
+        if (normieroll1 < .17) {
+            normietrait1 = "<b>Friendly:</b>This sim is naturally nice to others.<br>"
+        }
+        if (normieroll1 > .17 && normieroll1 < .34) {
+            normietrait1 = "<b>Easily Impressed:</b> This sim enjoys the little things.<br>"
+        }
+        if (normieroll1 > .34 && normieroll1 < .51) {
+            normietrait1 = "<b>Excitable:</b> This sim is generally happy.<br>"
+        }
+        if (normieroll1 > .51 && normieroll1 < .68) {
+            normietrait1 = "<b>Slob:</b> This sim doesn't mind messes.<br>"
+        }
+        if (normieroll1 > .68 && normieroll1 < .85) {
+            normietrait1 = "<b>Absent Minded:</b> This sim needs to work a little harder to understand things, It's a normal trait.<br>"
+        }
+        if (normieroll1 > .85) {
+            normietrait1 = "<b>Good:</b> This sim does not wish to harm anyone.<br>"
+        }
+    }
+
     if (Q2A === "3") {
         //if random is less than 0.5
         if (Math.random() < 0.5) {
@@ -143,24 +171,185 @@ function Q4() {
     //if Q4A is 1 then
     if (Q4A === "1") {
         if (q4roll < 0.33) {
-            selfdoubt = '<b>Never Nude:</b> This sim has self-doubt. Never Nude will only become a real trait when they age up into a teenager. They will have restricting ideas about sexuality.<br>'
+            selfdoubt = '<b>Never Nude:</b> This sim has self-doubt. Never Nude will only become a real trait when they age up into a teenager. They will have restricting ideas about sexuality.<br><br>'
         }
         else if (q4roll > .33 && q4roll < .66) {
-            selfdoubt = '<b>Loser:</b> This sim feels like they don’t have control over their life. They have low self-esteem.<br>'
+            selfdoubt = '<b>Loser:</b> This sim feels like they don’t have control over their life. They have low self-esteem.<br><br>'
         }
         else if (q4roll > .66) {
-            selfdoubt = '<b>Unflirty:</b> This trait becomes assigned when the sim becomes a teenager. This sim will have low self-esteem and doubts they will find love.<br>'
+            selfdoubt = '<b>Unflirty:</b> This trait becomes assigned when the sim becomes a teenager. This sim will have low self-esteem and doubts they will find love.<br><br>'
         }
     }
+
+    if (Q4A === "2") {
+        var normieroll2 = Math.random()
+        if (normieroll2 < .17) {
+            normietrait2 = "<b>Friendly:</b>This sim is naturally nice to others.<br><br>"
+        }
+        if (normieroll2 > .17 && normieroll2 < .34) {
+            normietrait2 = "<b>Easily Impressed:</b> This sim enjoys the little things.<br><br>"
+        }
+        if (normieroll2 > .34 && normieroll2 < .51) {
+            normietrait2 = "<b>Excitable:</b> This sim is generally happy.<br><br>"
+        }
+        if (normieroll2 > .51 && normieroll2 < .68) {
+            normietrait2 = "<b>Neat:</b> This sim prefers things clean.<br><br>"
+        }
+        if (normieroll2 > .68 && normieroll2 < .85) {
+            normietrait2 = "<b>Absent Minded:</b> This sim needs to work a little harder to understand things, It's a normal trait.<br><br>"
+        }
+        if (normieroll2 > .85) {
+            normietrait2 = "<b>Good:</b> This sim does not wish to harm anyone.<br><br>"
+        }
+    }
+
     if (Q4A === "3") {
         if (q4roll < 0.33) {
-            selfesteem = '<b>Disciplined:</b> This sim feels like they have control over their life. When interested in a new topic, they are determined to learn all they can.<br>'
+            selfesteem = '<b>Disciplined:</b> This sim feels like they have control over their life. When interested in a new topic, they are determined to learn all they can.<br><br>'
         }
         else if (q4roll > .33 && q4roll < .66) {
-            selfesteem = '<b>Flirty:</b> This will only become a real trait when they age up into a teenager but as a child they will have lots of crushes. They’re the kind of kid that has the confidence to tell their crush they like them.<br>'
+            selfesteem = '<b>Flirty:</b> This will only become a real trait when they age up into a teenager but as a child they will have lots of crushes. They’re the kind of kid that has the confidence to tell their crush they like them.<br><br>'
         }
         else if (q4roll > .66) {
-            selfesteem = '<b>Party Animal:</b> This will only become a real trait when they age up into a teenager but as a child, they will be highly energetic, sure of themselves, and have high self-esteem.<br>'
+            selfesteem = '<b>Party Animal:</b> This will only become a real trait when they age up into a teenager but as a child, they will be highly energetic, sure of themselves, and have high self-esteem.<br><br>'
         }
     }
+}
+
+function calculatefavcolor() {
+    var gender = document.querySelector("input[name='gender']:checked").value
+    var favcolornumber = Math.random()
+    if (favcolornumber < .125)
+        color = "Red and Black"
+    if (favcolornumber > .125 && favcolornumber < .25)
+        color = "Red/Shades of Red"
+    if (favcolornumber > .25 && favcolornumber < .375)
+        color = "Blue & Black"
+    if (favcolornumber > .375 && favcolornumber < .5)
+        color = "Blue/Shades of Blue"
+    if (favcolornumber > .5 && favcolornumber < .625)
+        color = "Cool colors, mainly Blue and Purple"
+    if (favcolornumber > .625 && favcolornumber < .75)
+        color = "Cool colors, mainly Yellow and Green"
+    if (favcolornumber > .75 && favcolornumber < .875)
+        color = "Warm Colors, mainly Red, Orange, Scarlett"
+    if (favcolornumber > .875 && gender === "female")
+        color = "Pink and Purple"
+    if (favcolornumber > .875 && gender === "male")
+        color = "Green and Brown"
+    if (favcolornumber > .875 && gender === "dontmatter")
+        if (Math.random() > .5)
+            color = "Pink and Purple"
+        else color = "Green and Brown"
+}
+
+function calculatefavanimal() {
+    var favanimalnumber = Math.random()
+    if (favanimalnumber < .416)
+        animal = "Dog"
+    if (favanimalnumber > .416 && favanimalnumber < .49)
+        animal = "Cat"
+    if (favanimalnumber > .49 && favanimalnumber < .582)
+        animal = "Bird"
+    if (favanimalnumber > .582 && favanimalnumber < .665)
+        animal = "Bugs"
+    if (favanimalnumber > .665 && favanimalnumber < .748)
+        animal = "Horse"
+    if (favanimalnumber > .748 && favanimalnumber < .831)
+        animal = "Lizard"
+    if (favanimalnumber > .831)
+        animal = "Hamster/Rodent"
+}
+
+function calculatedesiredroomthemes() {
+    var desiredroomthemesnumber = Math.random()
+    var roomtheme
+    var gender = document.querySelector("input[name='gender']:checked").value
+
+    //if male
+    if (gender === "male" && desiredroomthemesnumber < .125) {
+        roomtheme = "Space/Robots/Technology"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .125 && desiredroomthemesnumber < .25) {
+        roomtheme = "Nature"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .25 && desiredroomthemesnumber < .375) {
+        roomtheme = "Dinosaurs"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .375 && desiredroomthemesnumber < .5) {
+        roomtheme = "Animals"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .5 && desiredroomthemesnumber < .625) {
+        roomtheme = "Sports"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .625 && desiredroomthemesnumber < .75) {
+        roomtheme = "Racecars"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .75 && desiredroomthemesnumber < .875) {
+        roomtheme = "Army"
+    }
+    if (gender === "male" && desiredroomthemesnumber > .875) {
+        roomtheme = "Tools/Handiness"
+    }
+    //if female
+    if (gender === "female" && desiredroomthemesnumber < .125) {
+        roomtheme = "Space/Robots/Technology"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .125 && desiredroomthemesnumber < .25) {
+        roomtheme = "Nature"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .25 && desiredroomthemesnumber < .375) {
+        roomtheme = "Dinosaurs"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .375 && desiredroomthemesnumber < .5) {
+        roomtheme = "Animals"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .5 && desiredroomthemesnumber < .625) {
+        roomtheme = "Sports"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .625 && desiredroomthemesnumber < .75) {
+        roomtheme = "Fairies/Butterflies"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .75 && desiredroomthemesnumber < .875) {
+        roomtheme = "Flowers"
+    }
+    if (gender === "female" && desiredroomthemesnumber > .875) {
+        roomtheme = "Princesses"
+    }
+
+    //if dontmatter
+    if (gender === "dontmatter" && desiredroomthemesnumber < .09) {
+        roomtheme = "Space/Robots/Technology"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .09 && desiredroomthemesnumber < .18) {
+        roomtheme = "Nature"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .18 && desiredroomthemesnumber < .27) {
+        roomtheme = "Dinosaurs"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .27 && desiredroomthemesnumber < .36) {
+        roomtheme = "Animals"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .36 && desiredroomthemesnumber < .45) {
+        roomtheme = "Sports"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .45 && desiredroomthemesnumber < .54) {
+        roomtheme = "Fairies/Butterflies"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .54 && desiredroomthemesnumber < .63) {
+        roomtheme = "Flowers"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .63 && desiredroomthemesnumber < .72) {
+        roomtheme = "Army"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .72 && desiredroomthemesnumber < .81) {
+        roomtheme = "Rainbows"
+    }
+    if (gender === "dontmatter" && desiredroomthemesnumber > .81) {
+        roomtheme = "Royalty (Princes & Princesses)"
+    }
+
+    console.log(desiredroomthemesnumber)
+    //return selected room theme
+    return roomtheme
 }
