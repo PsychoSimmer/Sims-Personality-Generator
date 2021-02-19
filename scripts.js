@@ -85,7 +85,7 @@ function Q2() {
         }
         //else if random is greater than 0.5
         else {
-            cowardorhatesoutdoors = '<div><img class="traitimage" src="trait_hates_the_outdoors.png"><b>Hates Outdoors:</b> Since this sim didn\'t go outside often as a toddler, they have littel desire to travel or go out in nature. They prefer electronic entertainment (Computers, Video Games), They are a homebody.</div>'
+            cowardorhatesoutdoors = '<div><img class="traitimage" src="trait_hates_the_outdoors.png"><b>Hates Outdoors:</b> Since this sim didn\'t go outside often as a toddler, they have little desire to travel or go out in nature. They prefer electronic entertainment (Computers, Video Games), They are a homebody.</div>'
 
 
         }
@@ -93,7 +93,7 @@ function Q2() {
     if (Q2A === "2") {
         var normieroll1 = Math.random()
         if (normieroll1 < .17) {
-            normietrait1 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b>This sim is naturally nice to others.</div>'
+            normietrait1 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b>This child is likely to befriend children that don\t have friends.</div>'
         }
         if (normieroll1 > .17 && normieroll1 < .34) {
             normietrait1 = '<div><img class="traitimage" src="trait_easily_impressed.png"><b>Easily Impressed:</b> This sim enjoys the little things.</div>'
@@ -108,19 +108,19 @@ function Q2() {
             normietrait1 = '<div><img class="traitimage" src="trait_absent_minded.png"><b>Absent Minded:</b> This sim needs to work a little harder to understand things, It\'s a normal trait.</div>'
         }
         if (normieroll1 > .85) {
-            normietrait1 = '<div><img class="traitimage" src="trait_good.png"><b>Good:</b> This child is the type of child that would befriend someone that\'s being bullied and will always share without hesitation. This is a random trait and it is rare.<br></div>'
+            normietrait1 = '<div><img class="traitimage" src="trait_good.png"><b>Good:</b> This child is the type that would defend someone that\'s being bullied and tell adults smoking cigarettes that the shouldn\'t do that. They have a sense of morality at a young age. This is rare. <br></div>'
         }
     }
 
     if (Q2A === "3") {
         //if random is less than 0.5
         if (Math.random() < 0.5) {
-            braveoradventurous = '<div><img class="traitimage" src="trait_brave.png"><b>Brave:</b> As a child, this sim isn’t scared of new situations like moving or traveling and wants to go out on their own unsupervised at an age that might worry some parents. Can keep or discard after childhood is over.</div>'
+            braveoradventurous = '<div><img class="traitimage" src="trait_brave.png"><b>Brave:</b> As a child, this sim isn’t scared of new situations like moving or traveling and wants to go out on their own unsupervised at an age that might worry some parents.</div>'
 
         }
         //else if random is greater than 0.5
         else {
-            braveoradventurous = '<div><img class="traitimage" src="trait_adventurous.png"><b>Adventurous:</b> Will yearn to leave their hometown as a teen and will likely become a traveler when they graduate high school or college.</div>'
+            braveoradventurous = '<div><img class="traitimage" src="trait_adventurous.png"><b>Adventurous:</b> Because this toddler was given freedom to wander, this sim will yearn to leave their hometown as a teen and will likely become a traveler when they graduate high school or college.</div>'
 
         }
     }
@@ -137,27 +137,27 @@ function Q3() {
             introvert = '<div><img class="traitimage" src="trait_loner.png"><b>Loner:</b> This sim was not socialized enough as a toddler and became introverted, they don’t have a strong desire to be around others because it\'s what they\'re used to.</div>'
         }
         else if (q3roll > .25 && q3roll < .5) {
-            introvert = '<div><img class="traitimage" src="trait_shy.png"><b>Shy:</b> This sim is was not socialized enough to be comfortable in conversation. They desire friends but has trouble making them.</div>'
+            introvert = '<div><img class="traitimage" src="trait_shy.png"><b>Shy:</b> This sim was not socialized enough to be comfortable in social settings. They desire friends but has trouble making them.</div>'
         }
         else if (q3roll > .5 && q3roll < .75) {
-            introvert = '<div><img class="traitimage" src="trait_socially_awkward.png"><b>Socially Awkward:</b> This sim is introverted and didn’t get socialized enough in general and is less likely to be accepted by peers as children and teenagers. Could be the "weird but likeable to some" kind of kid, depending on other traits.</div>'
+            introvert = '<div><img class="traitimage" src="trait_socially_awkward.png"><b>Socially Awkward:</b> This sim didn’t get socialized enough in general and is less likely to be accepted by peers as children and teenagers. They could be the "weird but likeable to some" kind of kid, depending on other traits.</div>'
         }
         else if (q3roll > .75) {
-            introvert = '<div><img class="traitimage" src="trait_no_sense_of_humor.png"><b>No Sense of Humor:</b> This sim is introverted and didn’t get socialized enough to learn the nuances of humor. They can make friends, they just tend to be more serious than others.</div>'
+            introvert = '<div><img class="traitimage" src="trait_no_sense_of_humor.png"><b>No Sense of Humor:</b> This sim didn’t get socialized enough to learn the nuances of humor. They can make friends, they just tend to be more serious than others.</div>'
         }
     }
     if (Q3A === "3") {
         if (q3roll < 0.25) {
-            extrovert = '<div><img class="traitimage" src="trait_social_butterfly.png"><b>Social Butterfly:</b> This sim is an extrovert. They prefer having people around them rather than being alone. This does not neccesarily mean they are extremely likable(star quality), they just don\'t enjoy being alone. </div>'
+            extrovert = '<div><img class="traitimage" src="trait_social_butterfly.png"><b>Social Butterfly:</b> This sim is an extrovert. They prefer having people around them. This does not neccesarily mean they are extremely likable(star quality), they just don\'t enjoy being alone. </div>'
         }
         else if (q3roll > .25 && q3roll < .5) {
-            extrovert = '<div><img class="traitimage" src="trait_charismatic.png"><b>Charismatic:</b> This sim is good at social interaction, it doesn\'t mean they enjoy it or need it, they could still be a loner, it just means they understand socialization enough to benefit from it when they want.</div>'
+            extrovert = '<div><img class="traitimage" src="trait_charismatic.png"><b>Charismatic:</b> This sim is very good at social interaction. If extroverted, they\'re likely to be popular. If introverted, then it means they understand socialization but choose to not have many friends.</div>'
         }
         else if (q3roll > .5 && q3roll < .75) {
             extrovert = '<div><img class="traitimage" src="trait_good_sense_of_humor.png"><b>Good Sense of Humor:</b> This sim was socialized enough to become witty and funny! Pretty rare.</div>'
         }
         else if (q3roll > .75) {
-            extrovert = '<div><img class="traitimage" src="trait_family_oriented.png"><b>Family Oriented:</b> This sim enjoys the company of their family. If sim already has the rebellious trait, this means they won’t fight with their parents as a child or teen any more than average but still holds distrust for other authorities. </div>'
+            extrovert = '<div><img class="traitimage" src="trait_family_oriented.png"><b>Family Oriented:</b> This sim enjoys the company of their family.</div>'
         }
     }
 }
