@@ -120,7 +120,7 @@ function Q2() {
         }
         //else if random is greater than 0.5
         else {
-            braveoradventurous = '<div><img class="traitimage" src="trait_adventurous.png"><b>Adventurous:</b> Because this toddler was given freedom to wander, this sim will yearn to leave their hometown as a teen and will likely become a traveler when they graduate high school or college.</div>'
+            braveoradventurous = '<div><img class="traitimage" src="trait_adventurous.png"><b>Adventurous:</b> Because this toddler was given freedom to wander, this sim will yearn to leave their hometown as a teen and will likely travel or want to move to a new place when they graduate high school or college.</div>'
 
         }
     }
