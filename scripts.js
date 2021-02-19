@@ -26,7 +26,7 @@ function generate() {
 
     //put results on page
     document.querySelector(".inputtedname").innerText = document.querySelector(".nametextbox").value + "'s Personality Evaluation"
-    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + normietrait1 + introvert + extrovert + selfdoubt + selfesteem + normietrait2 + "<b>Favorite Color: </b>" + color + "<br><b>Favorite Animal: </b>" + animal + "<br><b>Desired Room Themes: </b>" + calculatedesiredroomthemes() + "  &  " + calculatedesiredroomthemes();
+    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + normietrait1 + introvert + extrovert + selfdoubt + selfesteem + normietrait2 + "<div><b>Favorite Color: </b>" + color + "</div><div><b>Favorite Animal: </b>" + animal + "</div><div><b>Desired Room Themes: </b>" + calculatedesiredroomthemes() + "  &  " + calculatedesiredroomthemes()+"</div>";
 
 }
 
@@ -52,20 +52,20 @@ function Q1() {
     if (Q1A === "1") {
         //if random is less than 0.5
         if (Math.random() < 0.5) {
-            grumpyOrRebellious = '<b>Grumpy:</b> This sim has a general uneasy feeling that will persist throughout their life. You might call it anxiety. They are hard to soothe and can act out emotionally at times. This trait is changeable through acquisition of enough opposing traits. This sim is a pessimist though, and that will never change.<br>'
+            grumpyOrRebellious = '<div><img class="traitimage" src="trait_grumpy.png"><b>Anxiety(Grumpy):</b> Inadequate care has lead to this sim having <b>Anxiety.</b> They are hard to soothe and can act out emotionally at times. This sim is a pessimist.</div>'
         }
         //else if random is greater than 0.5
         else {
-            grumpyOrRebellious = '<b>Rebellious:</b> Since this sim got inadequate care, they don’t naturally trust authority figures. This means parents when they’re a child, School and parents when they’re a teenager, and government when they’re an adult. This sim is a pessimist.<br>'
+            grumpyOrRebellious = '<div><img class="traitimage" src="trait_rebellious.png"><b>Rebellious:</b> Inadequare care has lead to this sim distruting authority figures. They will rebel against their parents when they\’re a child, the school when they\’re a teenager, and the government when they’re an adult. This sim is a pessimist.</div>'
 
         }
     }
     if (Q1A === "3") {
         if (Math.random() < 0.5) {
-            starorfamily = '<b>Star-Quality:</b> This sim is such an optimistic and happy sim that other sims are drawn to them. It doesn\'t necessarily mean they want to become famous, though they could likely succeed if they tried.<br>'
+            starorfamily = '<div><img class="traitimage" src="trait_star_quality.png"><b>Star-Quality:</b> This sim was so loved as a toddler that they have become so optimistic and happy that other sims are drawn to them. It doesn\'t necessarily mean they want to become famous, though they could likely succeed if they tried.</div>'
         }
         else {
-            starorfamily = '<b>Family-Oriented:</b> This sim admires their parental figures and desires to be like them. They are well behaved children who are likely to go for a career similar to their parents. This sim is optimistic.<br>'
+            starorfamily = '<div><img class="traitimage" src="trait_family_oriented.png"><b>Family-Oriented:</b> This sim was so loved as a toddler that they admire their parental figure(s) and desire to be like them when they grow up. They are well behaved children who are likely to go for a career similar to their parent(s). This sim is optimistic.</div>'
         }
 
     }
@@ -81,11 +81,11 @@ function Q2() {
     if (Q2A === "1") {
         //if random is less than 0.5
         if (Math.random() < 0.5) {
-            cowardorhatesoutdoors = '<b>Coward:</b> Extremely dislikes new situations throughout lifetime. As a child, checks for monsters under bed frequently.<br>'
+            cowardorhatesoutdoors = '<div><img class="traitimage" src="trait_coward.png"><b>Coward:</b> The avoidance of new experiences lead to this sims extreme dislikes of new situations. As a child, they check for monsters under the bed frequently.</div>'
         }
         //else if random is greater than 0.5
         else {
-            cowardorhatesoutdoors = '<b>Hates Outdoors:</b> Doesn’t desire travel or going out in nature. Prefers electronic entertainment (Computers, Video Games), Homebody.<br>'
+            cowardorhatesoutdoors = '<div><img class="traitimage" src="trait_hates_the_outdoors.png"><b>Hates Outdoors:</b> Since this sim didn\'t go outside often as a toddler, they have littel desire to travel or go out in nature. They prefer electronic entertainment (Computers, Video Games), They are a homebody.</div>'
 
 
         }
@@ -93,34 +93,34 @@ function Q2() {
     if (Q2A === "2") {
         var normieroll1 = Math.random()
         if (normieroll1 < .17) {
-            normietrait1 = "<b>Friendly:</b>This sim is naturally nice to others.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b>This sim is naturally nice to others.</div>'
         }
         if (normieroll1 > .17 && normieroll1 < .34) {
-            normietrait1 = "<b>Easily Impressed:</b> This sim enjoys the little things.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_easily_impressed.png"><b>Easily Impressed:</b> This sim enjoys the little things.</div>'
         }
         if (normieroll1 > .34 && normieroll1 < .51) {
-            normietrait1 = "<b>Excitable:</b> This sim is generally happy.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_excitable.png"><b>Excitable:</b> This sim is generally happy.</div>'
         }
         if (normieroll1 > .51 && normieroll1 < .68) {
-            normietrait1 = "<b>Slob:</b> This sim doesn't mind messes.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_slob.png"><b>Slob:</b> This sim doesn\'t mind the mess.</div>'
         }
         if (normieroll1 > .68 && normieroll1 < .85) {
-            normietrait1 = "<b>Absent Minded:</b> This sim needs to work a little harder to understand things, It's a normal trait.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_absent_minded.png"><b>Absent Minded:</b> This sim needs to work a little harder to understand things, It\'s a normal trait.</div>'
         }
         if (normieroll1 > .85) {
-            normietrait1 = "<b>Good:</b> This sim does not wish to harm anyone.<br>"
+            normietrait1 = '<div><img class="traitimage" src="trait_good.png"><b>Good:</b> This child is the type of child that would befriend someone that\'s being bullied and will always share without hesitation. This is a random trait and it is rare.<br></div>'
         }
     }
 
     if (Q2A === "3") {
         //if random is less than 0.5
         if (Math.random() < 0.5) {
-            braveoradventurous = '<b>Brave:</b> As a child, this sim isn’t scared of new situations like moving or traveling and wants to go out on their own unsupervised at an age that might worry some parents. Can keep or discard after childhood is over.<br>'
+            braveoradventurous = '<div><img class="traitimage" src="trait_brave.png"><b>Brave:</b> As a child, this sim isn’t scared of new situations like moving or traveling and wants to go out on their own unsupervised at an age that might worry some parents. Can keep or discard after childhood is over.</div>'
 
         }
         //else if random is greater than 0.5
         else {
-            braveoradventurous = '<b>Adventurous:</b> Will yearn to leave their hometown as a teen and will likely become a traveler when they are a young adult.<br>'
+            braveoradventurous = '<div><img class="traitimage" src="trait_adventurous.png"><b>Adventurous:</b> Will yearn to leave their hometown as a teen and will likely become a traveler when they graduate high school or college.</div>'
 
         }
     }
@@ -134,30 +134,30 @@ function Q3() {
     //if Q3A is 1 then
     if (Q3A === "1") {
         if (q3roll < 0.25) {
-            introvert = '<b>Loner:</b> This sim is introverted, they don’t desire to have many friends.<br>'
+            introvert = '<div><img class="traitimage" src="trait_loner.png"><b>Loner:</b> This sim was not socialized enough as a toddler and became introverted, they don’t have a strong desire to be around others because it\'s what they\'re used to.</div>'
         }
         else if (q3roll > .25 && q3roll < .5) {
-            introvert = '<b>Shy:</b> This Sim is introverted and desires friends but has trouble making them.<br>'
+            introvert = '<div><img class="traitimage" src="trait_shy.png"><b>Shy:</b> This sim is was not socialized enough to be comfortable in conversation. They desire friends but has trouble making them.</div>'
         }
         else if (q3roll > .5 && q3roll < .75) {
-            introvert = '<b>Socially Awkward:</b> This sim is introverted and didn’t get socialized enough in general and is less likely to be accepted by peers as children and teenagers.<br>'
+            introvert = '<div><img class="traitimage" src="trait_socially_awkward.png"><b>Socially Awkward:</b> This sim is introverted and didn’t get socialized enough in general and is less likely to be accepted by peers as children and teenagers. Could be the "weird but likeable to some" kind of kid, depending on other traits.</div>'
         }
         else if (q3roll > .75) {
-            introvert = '<b>No Sense of Humor:</b> This sim is introverted and didn’t get socialized enough to learn the nuances of humor.<br>'
+            introvert = '<div><img class="traitimage" src="trait_no_sense_of_humor.png"><b>No Sense of Humor:</b> This sim is introverted and didn’t get socialized enough to learn the nuances of humor. They can make friends, they just tend to be more serious than others.</div>'
         }
     }
     if (Q3A === "3") {
         if (q3roll < 0.25) {
-            extrovert = '<b>Social Butterfly:</b> This trait doesn’t necessarily mean they are good at making friends, it just means they strongly prefer having people around them rather than being alone. <br>'
+            extrovert = '<div><img class="traitimage" src="trait_social_butterfly.png"><b>Social Butterfly:</b> This sim is an extrovert. They prefer having people around them rather than being alone. This does not neccesarily mean they are extremely likable(star quality), they just don\'t enjoy being alone. </div>'
         }
         else if (q3roll > .25 && q3roll < .5) {
-            extrovert = '<b>Charismatic:</b> This sim is good at social interaction, it doesn\'t mean they enjoy it or need it, they could still be a loner, it just means they understand it enough to benefit from it when they want.<br>'
+            extrovert = '<div><img class="traitimage" src="trait_charismatic.png"><b>Charismatic:</b> This sim is good at social interaction, it doesn\'t mean they enjoy it or need it, they could still be a loner, it just means they understand socialization enough to benefit from it when they want.</div>'
         }
         else if (q3roll > .5 && q3roll < .75) {
-            extrovert = '<b>Good Sense of Humor:</b> This sim is actually witty and funny! Pretty rare<br>'
+            extrovert = '<div><img class="traitimage" src="trait_good_sense_of_humor.png"><b>Good Sense of Humor:</b> This sim was socialized enough to become witty and funny! Pretty rare.</div>'
         }
         else if (q3roll > .75) {
-            extrovert = '<b>Family Oriented:</b> This sim enjoys the company of their family. If sim already has the rebellious trait, this means they won’t fight with their parents as a child or teen any more than average but still holds distrust for other authorities. <br>'
+            extrovert = '<div><img class="traitimage" src="trait_family_oriented.png"><b>Family Oriented:</b> This sim enjoys the company of their family. If sim already has the rebellious trait, this means they won’t fight with their parents as a child or teen any more than average but still holds distrust for other authorities. </div>'
         }
     }
 }
@@ -171,47 +171,47 @@ function Q4() {
     //if Q4A is 1 then
     if (Q4A === "1") {
         if (q4roll < 0.33) {
-            selfdoubt = '<b>Never Nude:</b> This sim has self-doubt. Never Nude will only become a real trait when they age up into a teenager. They will have restricting ideas about sexuality.<br><br>'
+            selfdoubt = '<div><img class="traitimage" src="trait_never_nude.png"><b>Never Nude:</b> This this sim had trouble getting potty trained, they learned that their private parts are frustrating. They have self-esteem issues. Never Nude will only become a real trait when they age up into a teenager, but they will have repressive ideas about sexuality and their body.</div>'
         }
         else if (q4roll > .33 && q4roll < .66) {
-            selfdoubt = '<b>Loser:</b> This sim feels like they don’t have control over their life. They have low self-esteem.<br><br>'
+            selfdoubt = '<div><img class="traitimage" src="trait_loser.png"><b>Loser:</b> This sim feels has low self-esteem and feels like everything is too hard to even try. They have low self-esteem.</div>'
         }
         else if (q4roll > .66) {
-            selfdoubt = '<b>Unflirty:</b> This trait becomes assigned when the sim becomes a teenager. This sim will have low self-esteem and doubts they will find love.<br><br>'
+            selfdoubt = '<div><img class="traitimage" src="trait_unflirty.png"><b>Unflirty:</b> This trait becomes assigned when the sim becomes a teenager. This sim will have low self-esteem and doubts they will find love.</div>'
         }
     }
 
     if (Q4A === "2") {
         var normieroll2 = Math.random()
         if (normieroll2 < .17) {
-            normietrait2 = "<b>Friendly:</b>This sim is naturally nice to others.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b>This sim is naturally nice to others.</div>'
         }
         if (normieroll2 > .17 && normieroll2 < .34) {
-            normietrait2 = "<b>Easily Impressed:</b> This sim enjoys the little things.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_easily_impressed.png"><b>Easily Impressed:</b> This sim enjoys the little things.</div>'
         }
         if (normieroll2 > .34 && normieroll2 < .51) {
-            normietrait2 = "<b>Excitable:</b> This sim is generally happy.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_excitable.png"><b>Excitable:</b> This sim is generally happy.</div>'
         }
         if (normieroll2 > .51 && normieroll2 < .68) {
-            normietrait2 = "<b>Neat:</b> This sim prefers things clean.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_neat.png"><b>Neat:</b> This sim prefers things clean.</div>'
         }
         if (normieroll2 > .68 && normieroll2 < .85) {
-            normietrait2 = "<b>Absent Minded:</b> This sim needs to work a little harder to understand things, It's a normal trait.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_absent_minded.png"><b>Absent Minded:</b> This sim needs to work a little harder to understand things, It\'s a normal trait.</div>'
         }
         if (normieroll2 > .85) {
-            normietrait2 = "<b>Good:</b> This sim does not wish to harm anyone.<br><br>"
+            normietrait2 = '<div><img class="traitimage" src="trait_diva.png"><b>Diva:</b> This child likes to brag about what happened at school, likes to talk about themselves, is very selfish when it comes to their siblings, this is a random trait and is very rare.</div>'
         }
     }
 
     if (Q4A === "3") {
         if (q4roll < 0.33) {
-            selfesteem = '<b>Disciplined:</b> This sim feels like they have control over their life. When interested in a new topic, they are determined to learn all they can.<br><br>'
+            selfesteem = '<div><img class="traitimage" src="trait_disciplined.png"><b>Disciplined:</b> This sim feels like they have control over their life. When interested in a new topic, they are determined to learn all they can.</div>'
         }
         else if (q4roll > .33 && q4roll < .66) {
-            selfesteem = '<b>Flirty:</b> This will only become a real trait when they age up into a teenager but as a child they will have lots of crushes. They’re the kind of kid that has the confidence to tell their crush they like them.<br><br>'
+            selfesteem = '<div><img class="traitimage" src="trait_flirty.png"><b>Flirty:</b> This will only become a real trait when they age up into a teenager but as a child they will have lots of crushes. They’re the kind of kid that has the confidence to tell their crush they like them.</div>'
         }
         else if (q4roll > .66) {
-            selfesteem = '<b>Party Animal:</b> This will only become a real trait when they age up into a teenager but as a child, they will be highly energetic, sure of themselves, and have high self-esteem.<br><br>'
+            selfesteem = '<div><img class="traitimage" src="trait_party_animal.png"><b>Party Animal:</b> This will only become a real trait when they age up into a teenager but as a child, they will be highly energetic, sure of themselves, and have high self-esteem.</div>'
         }
     }
 }

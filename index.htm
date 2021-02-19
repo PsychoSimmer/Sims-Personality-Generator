@@ -15,9 +15,10 @@
 </head>
 
 <body>
-    <div class="container"> <img class="plumbob" src="spinning plumbob.gif" > <img class="plumbob2" src="spinning plumbob.gif">
+    <div class="container"> <img class="plumbob" src="spinning plumbob.gif"> <img class="plumbob2" src="spinning plumbob.gif">
         <h1>Sims Child Personality Generator</h1>
-        <p>Name: <input type="text" class="nametextbox" /> Gender: <input type="radio" id="female" value="female" name="gender">
+        <p>Name: <input type="text" class="nametextbox" /> Gender: <input type="radio" id="female" value="female"
+                name="gender">
             <Label for="female">Female</Label>
             <input type="radio" id="male" value="male" name="gender">
             <Label for="male">Male</Label>
@@ -27,44 +28,68 @@
         <p>Choose the option that best describes the parent(s) actions in the given situation.</p>
         <h2>How much affection was toddler given?</h2>
         <div class="questioncontainer">
-            <input type="radio" id="q1a1" value="1" name="How much affection was toddler given?">
-            <label for="q1a1">Not much. Parent(s) were often busy with work or aren't very affectionate people. </label>
-            <input type="radio" id="q1a2" value="2" name="How much affection was toddler given?">
-            <label for="q1a2">An average amount. </label>
+            <div><input type="radio" id="q1a1" value="1" name="How much affection was toddler given?">
+                <label for="q1a1"><b>Not much.</b> Parent(s) were often busy with work or weren't very affectionate
+                    people.</label>
+            </div>
+            <div><input type="radio" id="q1a2" value="2" name="How much affection was toddler given?">
+                <label for="q1a2">An <b>average</b> amount.</label>
+            </div>
             <input type="radio" id="q1a3" value="3" name="How much affection was toddler given?">
-            <label for="q1a3">Parent(s) were very affectionate and had a lot of time for the toddler. </label>
+            <label for="q1a3"><b>A lot. </b>Parent(s) were very affectionate and had a lot of time for the toddler.
+            </label>
         </div>
         <h2>Was the toddler taken to the park and encouraged to explore?</h2>
         <div class="questioncontainer">
-            <input type="radio" id="q2a1" value="1" name="Was the toddler taken to the park and encouraged to explore?">
-            <label for="q2a1">No, Toddler was home a lot or the parent(s) anxiety prevented kid from exploration in fear
-                of them getting hurt. </label>
-            <input type="radio" id="q2a2" value="2" name="Was the toddler taken to the park and encouraged to explore?">
-            <label for="q2a2">Toddler played in a backyard sometimes and taken to the park sometimes. </label>
-            <input type="radio" id="q2a3" value="3" name="Was the toddler taken to the park and encouraged to explore?">
-            <label for="q2a3">Toddler was taken to the park almost everyday or internationally traveled. </label>
+            <div><input type="radio" id="q2a1" value="1"
+                    name="Was the toddler taken to the park and encouraged to explore?">
+                <label for="q2a1"><b>No</b>, Toddler was home most days or the parent(s) anxiety prevented toddler from
+                    exploration in fear
+                    of them getting hurt. </label>
+            </div>
+            <div><input type="radio" id="q2a2" value="2"
+                    name="Was the toddler taken to the park and encouraged to explore?">
+                <label for="q2a2"><b>Sometimes. </b>Toddler played in a backyard and taken to the park sometimes.
+                </label>
+            </div>
+            <div><input type="radio" id="q2a3" value="3"
+                    name="Was the toddler taken to the park and encouraged to explore?">
+                <label for="q2a3"><b>Yes! </b>Toddler played in the backyard/at the park most days or internationally
+                    traveled. </label>
+            </div>
         </div>
         <h2>After learning to speak, how often was the toddler included in conversations?</h2>
         <div class="questioncontainer">
-            <input type="radio" id="q3a1" value="1"
-                name="After learning to speak, how often was the toddler included in conversations?">
-            <label for="q3a1">Toddler was rarely chatted to and was mostly left to play with toys. </label>
-            <input type="radio" id="q3a2" value="2"
-                name="After learning to speak, how often was the toddler included in conversations?">
-            <label for="q3a2">Toddler was chatted to sometimes, and sometimes left to play with toys. </label>
-            <input type="radio" id="q3a3" value="3"
-                name="After learning to speak, how often was the toddler included in conversations?">
-            <label for="q3a3">Parents were very attentive and patient in incuding the toddler in conversations.</label>
+            <div> <input type="radio" id="q3a1" value="1"
+                    name="After learning to speak, how often was the toddler included in conversations?">
+                <label for="q3a1"><b>Not often.</b>Toddler was rarely chatted to and was mostly left to play with toys.
+                </label>
+            </div>
+            <div> <input type="radio" id="q3a2" value="2"
+                    name="After learning to speak, how often was the toddler included in conversations?">
+                <label for="q3a2">Toddler was chatted to <b>sometimes</b>, and sometimes left to play with toys.
+                </label>
+            </div>
+            <div> <input type="radio" id="q3a3" value="3"
+                    name="After learning to speak, how often was the toddler included in conversations?">
+                <label for="q3a3"><b>Often. </b>Parents were very attentive and patient in incuding the toddler in
+                    conversations.</label>
+            </div>
         </div>
-        <h2>How did the parent(s) do at potty training the toddler?</h2>
+        <h2>How patient were the parent(s) while potty training the toddler?</h2>
         <div class="questioncontainer">
-            <input type="radio" id="q4a1" value="1" name="How did the parent(s) do at potty training the toddler?">
-            <label for="q4a1">Parents had little patience and would get visibly stressed. </label>
-            <input type="radio" id="q4a2" value="2" name="How did the parent(s) do at potty training the toddler?">
-            <label for="q4a2">It was a normal experience. </label>
-            <input type="radio" id="q4a3" value="3" name="How did the parent(s) do at potty training the toddler?">
-            <label for="q4a3">Parents had patience and gave lots of positive reinforcement to the toddler during potty
-                training. </label>
+            <div> <input type="radio" id="q4a1" value="1"
+                    name="How did the parent(s) do at potty training the toddler?">
+                <label for="q4a1"><b>Not very. </b>Parents had little patience and would get visibly stressed. </label>
+            </div>
+            <div><input type="radio" id="q4a2" value="2" name="How did the parent(s) do at potty training the toddler?">
+                <label for="q4a2">It was a <b>normal</b> experience. </label>
+            </div>
+
+            <div><input type="radio" id="q4a3" value="3" name="How did the parent(s) do at potty training the toddler?">
+                <label for="q4a3"><b>Very. </b>Parents had patience and gave lots of positive reinforcement to the
+                    toddler during potty training. </label>
+            </div>
         </div>
         <button class="submitbutton">Generate Personality!</button>
         <h1 class="inputtedname"></h1>

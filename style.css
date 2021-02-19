@@ -8,20 +8,20 @@ border-radius: 40px;
 }
 
 .questioncontainer input {
-    display:none; 
+    /*display:none; */
 }
 
 .questioncontainer input:checked + label {
 background-color:rgb(22, 126, 31);
 }
 
-.questioncontainer{
-    display:flex; 
-
+.questioncontainer div {
+   display:flex;
+    
 }
 
 .questioncontainer label{
-    margin:10px;
+    margin:3px;
 }
 
 label:hover {
@@ -63,3 +63,16 @@ h1 {    text-align: center;
     .results{
         display:none
     }
+
+h2{
+    margin-bottom:0;
+    margin-top:30px;
+    font-size:20px;
+}
+.traitimage{
+    float:left
+}
+.results div{
+    clear:both;
+    padding:10px;
+}
