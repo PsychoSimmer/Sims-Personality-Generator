@@ -7,6 +7,9 @@ padding:15px;
 border-radius: 40px;
 }
 
+body{
+background-color:rgb(126, 51, 126);
+}
 .questioncontainer input {
     /*display:none; */
 }
@@ -81,4 +84,28 @@ h2{
     width:45px;
     vertical-align:middle;
 
+}
+.download-link p {
+    width: 200px;
+    position: fixed;
+    background-color: rgb(170, 225, 175);
+    top: 450px;
+    transform: translateX(650px);
+    padding: 15px;
+    border-radius: 30px;
+    font-size: x-large;
+    font-family: 'Oxygen', sans-serif;
+    color: purple;
+
+}
+
+.download-link {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 15px;
+    position: relative;
+}
+
+.download-link p a{
+    text-decoration: none;
 }
