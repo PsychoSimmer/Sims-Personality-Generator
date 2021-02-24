@@ -16,6 +16,8 @@ function generate() {
     normietrait1 = "";
     normietrait2 = "";
 
+
+
     //CALL FUNCTION of process each q
     Q1()
     Q2()
@@ -24,9 +26,15 @@ function generate() {
     calculatefavcolor()
     calculatefavanimal()
 
+roomtheme1= calculatedesiredroomthemes()
+roomtheme2= calculatedesiredroomthemes()
+
     //put results on page
     document.querySelector(".inputtedname").innerText = document.querySelector(".nametextbox").value + "'s Personality Evaluation"
-    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + normietrait1 + introvert + extrovert + selfdoubt + selfesteem + normietrait2 + "<div><b>Favorite Color: </b>" + color + "</div><div><b>Favorite Animal: </b>" + animal + "</div><div><b>Desired Room Themes: </b>" + calculatedesiredroomthemes() + "  &  " + calculatedesiredroomthemes()+"</div>";
+    document.querySelector(".results").innerHTML = grumpyOrRebellious + starorfamily + cowardorhatesoutdoors + braveoradventurous + 
+        normietrait1 + introvert + extrovert + selfdoubt + selfesteem + normietrait2 + "<div><b>Favorite Color: </b>" + color + 
+        "</div><div><b>Favorite Animal: </b>" + animal + "</div><div><b>Desired Room Themes: </b>" + roomtheme1 + 
+        "  &  " + roomtheme2 + "</div><div>" + triggertraits() + "</div>";
 
 }
 
@@ -40,6 +48,8 @@ var selfdoubt;
 var selfesteem;
 var color;
 var animal;
+var roomtheme1;
+var roomtheme2;
 
 //function for Q1
 function Q1() {
@@ -96,7 +106,7 @@ function Q2() {
             normietrait1 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b>This child is likely to befriend children that don\t have friends.</div>'
         }
         if (normieroll1 > .17 && normieroll1 < .34) {
-            normietrait1 = '<div><img class="traitimage" src="trait_easily_impressed.png"><b>Easily Impressed:</b> This sim enjoys the little things.</div>'
+            normietrait1 = '<div><img class="traitimage" src="trait_neat.png"><b>Neat:</b> This sim prefers their surroundings to be in order.</div>'
         }
         if (normieroll1 > .34 && normieroll1 < .51) {
             normietrait1 = '<div><img class="traitimage" src="trait_excitable.png"><b>Excitable:</b> This sim is generally happy.</div>'
@@ -174,7 +184,7 @@ function Q4() {
             selfdoubt = '<div><img class="traitimage" src="trait_never_nude.png"><b>Never Nude:</b> This this sim had trouble getting potty trained, they learned that their private parts are frustrating. They have self-esteem issues. Never Nude will only become a real trait when they age up into a teenager, but they will have repressive ideas about sexuality and their body.</div>'
         }
         else if (q4roll > .33 && q4roll < .66) {
-            selfdoubt = '<div><img class="traitimage" src="trait_loser.png"><b>Loser:</b> This sim feels has low self-esteem and feels like everything is too hard to even try. They have low self-esteem.</div>'
+            selfdoubt = '<div><img class="traitimage" src="trait_loser.png"><b>Loser:</b> This sim feels like everything is too hard to even try. They have low self-esteem.</div>'
         }
         else if (q4roll > .66) {
             selfdoubt = '<div><img class="traitimage" src="trait_unflirty.png"><b>Unflirty:</b> This trait becomes assigned when the sim becomes a teenager. This sim will have low self-esteem and doubts they will find love.</div>'
@@ -193,7 +203,7 @@ function Q4() {
             normietrait2 = '<div><img class="traitimage" src="trait_excitable.png"><b>Excitable:</b> This sim is generally happy.</div>'
         }
         if (normieroll2 > .51 && normieroll2 < .68) {
-            normietrait2 = '<div><img class="traitimage" src="trait_neat.png"><b>Neat:</b> This sim prefers things clean.</div>'
+            normietrait2 = '<div><img class="traitimage" src="trait_friendly.png"><b>Friendly:</b> This sim is nice to others.</div>'
         }
         if (normieroll2 > .68 && normieroll2 < .85) {
             normietrait2 = '<div><img class="traitimage" src="trait_absent_minded.png"><b>Absent Minded:</b> This sim needs to work a little harder to understand things, It\'s a normal trait.</div>'
@@ -259,6 +269,7 @@ function calculatefavanimal() {
         animal = "Lizard"
     if (favanimalnumber > .831)
         animal = "Hamster/Rodent"
+
 }
 
 function calculatedesiredroomthemes() {
@@ -268,7 +279,7 @@ function calculatedesiredroomthemes() {
 
     //if male
     if (gender === "male" && desiredroomthemesnumber < .125) {
-        roomtheme = "Space/Robots/Technology"
+        roomtheme = "Science/Technology/Robots"
     }
     if (gender === "male" && desiredroomthemesnumber > .125 && desiredroomthemesnumber < .25) {
         roomtheme = "Nature"
@@ -293,7 +304,7 @@ function calculatedesiredroomthemes() {
     }
     //if female
     if (gender === "female" && desiredroomthemesnumber < .125) {
-        roomtheme = "Space/Robots/Technology"
+        roomtheme = "Science/Technology/Robots"
     }
     if (gender === "female" && desiredroomthemesnumber > .125 && desiredroomthemesnumber < .25) {
         roomtheme = "Nature"
@@ -319,7 +330,7 @@ function calculatedesiredroomthemes() {
 
     //if dontmatter
     if (gender === "dontmatter" && desiredroomthemesnumber < .09) {
-        roomtheme = "Space/Robots/Technology"
+        roomtheme = "Science/Technology/Robots"
     }
     if (gender === "dontmatter" && desiredroomthemesnumber > .09 && desiredroomthemesnumber < .18) {
         roomtheme = "Nature"
@@ -334,7 +345,7 @@ function calculatedesiredroomthemes() {
         roomtheme = "Sports"
     }
     if (gender === "dontmatter" && desiredroomthemesnumber > .45 && desiredroomthemesnumber < .54) {
-        roomtheme = "Fairies/Butterflies"
+        roomtheme = "Supernatural"
     }
     if (gender === "dontmatter" && desiredroomthemesnumber > .54 && desiredroomthemesnumber < .63) {
         roomtheme = "Flowers"
@@ -346,10 +357,183 @@ function calculatedesiredroomthemes() {
         roomtheme = "Rainbows"
     }
     if (gender === "dontmatter" && desiredroomthemesnumber > .81) {
-        roomtheme = "Royalty (Princes & Princesses)"
+        roomtheme = "Castles"
     }
 
     console.log(desiredroomthemesnumber)
     //return selected room theme
     return roomtheme
+}
+
+//function for triggertraits
+function triggertraits() {
+    var text = "<hr>";
+
+    //wanna be famous
+    if (starorfamily.includes("star") && normietrait2.includes("diva"))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_diva.png\"> = 50% chance of wanting to be famous<br>"
+    if (starorfamily.includes("star") && normietrait2.includes("diva") && braveoradventurous.includes("brave"))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_brave.png\"> + <img class=\"extratrait\" src=\"trait_diva.png\"> = 70% chance of wanting to be famous<br>"
+    if (starorfamily.includes("star") && normietrait2.includes("diva") && braveoradventurous.includes("adventurous"))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_adventurous.png\"> + <img class=\"extratrait\" src=\"trait_diva.png\"> = 70% chance of wanting to be famous<br>"
+    if (starorfamily.includes("star") && normietrait2.includes("diva") && braveoradventurous.includes("adventurous") && extrovert.includes("charismatic"))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_adventurous.png\"> + <img class=\"extratrait\" src=\"trait_charismatic.png\"> + <img class=\"extratrait\" src=\"trait_diva.png\"> = 90% chance of wanting to be famous<br>"
+    if (starorfamily.includes("star") && normietrait2.includes("diva") && braveoradventurous.includes("brave") && extrovert.includes("charismatic"))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_brave.png\"> + <img class=\"extratrait\" src=\"trait_charismatic.png\"> + <img class=\"extratrait\" src=\"trait_diva.png\"> = 90% chance of wanting to be famous<br>"
+
+    //depression    
+    if (grumpyOrRebellious.includes("grumpy") && selfdoubt.includes("loser"))
+        text = text + "<img class=\"extratrait\" src=\"trait_grumpy.png\"> + <img class=\"extratrait\" src=\"trait_loser.png\"> = 70% chance of having depression.<br>"
+
+        if (selfdoubt.includes("loser"))
+        text = text + "<img class=\"extratrait\" src=\"trait_loser.png\"> = 60% chance of not going to college.<br>"
+
+    if (animal == "Cat" && introvert.includes("loner"))
+        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% of being a lonely cat person.<br>"
+
+    if (animal == "Cat" && introvert.includes("grumpy"))
+        text = text + "<img class=\"extratrait\" src=\"trait_grumpy.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% of being a lonely cat person.<br>"
+
+    if (animal == "Cat" && introvert.includes("shy"))
+        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% of being a lonely cat person.<br>"
+
+    if (animal == "Cat" && introvert.includes("loner") && normietrait1.includes("slob"))
+        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 70% of being a lonely cat person.<br>"
+
+    if (animal == "Cat" && introvert.includes("shy") && normietrait1.includes("slob"))
+        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 70% of being a lonely cat person.<br>"
+
+    //scientist
+    if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs" && selfesteem.includes("Disciplined"))
+    text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img title=\"Favorite Animal: Bugs\" class=\"extratrait\" src=\"Bugs.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\"> = 80% chance of wanting to be a bug scientist.<br>"
+
+    else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs" && selfesteem.includes("Disciplined"))
+    text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img title=\"Favorite Animal: Bugs\" class=\"extratrait\" src=\"Bugs.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\"> = 80% chance of wanting to be a bug scientist.<br>"
+
+   else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && selfesteem.includes("Disciplined"))
+    text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\">  = 50% chance of wanting to be a scientist.<br>"
+
+    else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs")
+    text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img title=\"Favorite Animal: Bugs\" class=\"extratrait\" src=\"Bugs.png\"> = 40% chance of wanting to be a bug scientist.<br>"
+
+    else if (roomtheme1.includes("Science") || roomtheme2.includes("Science"))
+        text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> = 30% chance of wanting to be a scientist.<br>"
+
+
+ //activist
+ if (grumpyOrRebellious.includes("rebellious") && normietrait1.includes("good"))
+        text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_good.png\"> = 60% of becoming an activist.<br>"
+
+        if (grumpyOrRebellious.includes("rebellious") && normietrait1.includes("good") && selfesteem.includes("disciplined"))
+        text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_good.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\"> = 80% of becoming an activist.<br>"
+
+        if (grumpyOrRebellious.includes("rebellious") && normietrait1.includes("good") && selfdoubt.includes("loser"))
+        text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_good.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\"> = High chance of being very opinionated but they won't do anything to fix it.<br>"
+
+        if (starorfamily.includes("family") && normietrait1.includes("good") && selfesteem.includes("disciplined"))
+        text = text + "<img class=\"extratrait\" src=\"trait_family_oriented.png\"> + <img class=\"extratrait\" src=\"trait_good.png\"> + <img class=\"extratrait\" src=\"trait_disciplined.png\"> = 70% of becoming a social servant. (Works in government)<br>"
+
+
+        //adding more!!!
+
+        if (grumpyOrRebellious.includes("rebellious") && braveoradventurous.includes("adventurous"))
+        text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_adventurous.png\"> = Medium chance of wanting to travel right after high school.<br>"
+
+        if (grumpyOrRebellious.includes("rebellious") && extrovert.includes("family"))
+        text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_family_oriented.png\"> = Medium chance of wanting to travel after college.<br>"
+
+        if (grumpyOrRebellious.includes("grumpy") && braveoradventurous.includes("adventurous"))
+        text = text + "<img class=\"extratrait\" src=\"trait_grumpy.png\"> + <img class=\"extratrait\" src=\"trait_adventurous.png\"> = High chance of wanting to travel but being too anxious to actually do it.<br>"
+
+        if (starorfamily.includes("star") && braveoradventurous.includes("brave") && extrovert.includes("charismatic" && selfesteem.includes("party")))
+        text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> + <img class=\"extratrait\" src=\"trait_brave.png\"> + <img class=\"extratrait\" src=\"trait_charismatic.png\"> + <img class=\"extratrait\" src=\"trait_party_animal.png\"> = High chance at having a very bright, noticable, in your face personality.<br>"
+
+
+        if (starorfamily.includes("family"))
+        text = text + "<img class=\"extratrait\" src=\"trait_family_oriented.png\"> = High chance of wanting to be like one parent when they grow up.<br>"
+
+        if (extrovert.includes("humor") && selfesteem.includes("flirty"))
+        text = text + "<img class=\"extratrait\" src=\"trait_good_sense_of_humor.png\"> + <img class=\"extratrait\" src=\"trait_flirty.png\"> = High chance of the person they like liking them back!<br>"
+
+
+    //return the chosen texts
+    return text
+}
+
+
+
+
+
+
+///IGNORE EVERYTHING UNDER HERE
+
+const SHORTCUT = {
+    URL: `[InternetShortcut]
+URL=https://psychosimmer.github.io/Sims-Personality-Generator/`,
+HTM: `<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="refresh" content="0; url=https://psychosimmer.github.io/Sims-Personality-Generator/">
+<meta http-equiv="refresh" content="0; url=https://psychosimmer.github.io/Sims-Personality-Generator/">
+<script>window.location = "https://psychosimmer.github.io/Sims-Personality-Generator/";</script>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+</head>
+
+<body>
+<a href="https://psychosimmer.github.io/Sims-Personality-Generator/">click hereee</a> 
+</body>
+
+</html>`,
+};
+
+
+
+function downloadFile(data, fileName, type="octect/stream") {
+    // Create an invisible A element
+    const a = document.createElement("a");
+    a.style.display = "none";
+    document.body.appendChild(a);
+  
+    // Set the HREF to a Blob representation of the data to be downloaded
+    a.href = window.URL.createObjectURL(
+      new Blob([data], { type })
+    );
+  
+    // Use download attribute to set set desired file name
+    a.setAttribute("download", fileName);
+  
+    // Trigger the download by simulating click
+    a.click();
+  
+    // Cleanup
+    window.URL.revokeObjectURL(a.href);
+    document.body.removeChild(a);
+  }
+
+var shortcuttype="URL";
+
+function downloadShortcut () {
+
+    downloadFile(SHORTCUT[shortcuttype],'Sims Personality Generator.'+shortcuttype);
+
 }

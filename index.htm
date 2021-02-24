@@ -12,12 +12,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 </head>
 
 <body>
     <div class="container"> <img class="plumbob" src="spinning plumbob.gif"> <img class="plumbob2" src="spinning plumbob.gif">
         <h1>Sims Child Personality Generator</h1>
-        <p><b>Do you have trouble coming up with personalities for sims children when they all act the same?</b> Think back to when they were a toddler and answer these questions to determine what their childhood personality is like! </p>
+        <p><b>Do you have trouble coming up with personalities for sims children when they all act the same?</b> Answer these questions to determine what their personality is like! </p><br>
+        Best time to use: When a toddler ages into a child.
 
         <p>Name: <input type="text" class="nametextbox" /> Gender: <input type="radio" id="female" value="female"
                 name="gender">
@@ -28,7 +51,7 @@
             <Label for="dont matter">Doesn't Matter</Label>
         </p>
         
-        <h2>How much affection was this toddler given?</h2>
+        <h2>When the child was a toddler, how much physical affection were they given?</h2>
         <div class="questioncontainer">
             <div><input type="radio" id="q1a1" value="1" name="How much affection was toddler given?">
                 <label for="q1a1"><b>Not much.</b> Parent(s) were often busy with work or weren't very affectionate
@@ -41,11 +64,11 @@
             <label for="q1a3"><b>A lot. </b>Toddler was given a lot of physical affection.
             </label>
         </div>
-        <h2>Was the toddler taken to the park and encouraged to explore?</h2>
+        <h2>When the child was a toddler, were they taken to the park and encouraged to explore?</h2>
         <div class="questioncontainer">
             <div><input type="radio" id="q2a1" value="1"
                     name="Was the toddler taken to the park and encouraged to explore?">
-                <label for="q2a1"><b>No</b>, Toddler was encouraged to stay close to parent. Toddler was at home often.
+                <label for="q2a1"><b>No</b>, Toddler was encouraged to stay close to parent so they wouldn't get hurt. Toddler was at home often.
                  </label>
             </div>
             <div><input type="radio" id="q2a2" value="2"
@@ -59,7 +82,7 @@
                      </label>
             </div>
         </div>
-        <h2>After learning to speak, how often was the toddler included in conversations?</h2>
+        <h2>When the child was a toddler, how often was it included in conversations?</h2>
         <div class="questioncontainer">
             <div> <input type="radio" id="q3a1" value="1"
                     name="After learning to speak, how often was the toddler included in conversations?">
@@ -77,7 +100,7 @@
                     conversations.</label>
             </div>
         </div>
-        <h2>How patient were the parent(s) while potty training the toddler?</h2>
+        <h2>When the child was a toddler, how patient were the parent(s) while potty training them?</h2>
         <div class="questioncontainer">
             <div> <input type="radio" id="q4a1" value="1"
                     name="How did the parent(s) do at potty training the toddler?">
@@ -96,7 +119,11 @@
         <h1 class="inputtedname"></h1>
         <p class="results"></p>
     </div>
+
     <script src="scripts.js"></script>
+
+    <a href="#" onclick="downloadShortcut()">Download</a>
+    
 </body>
 
 </html>

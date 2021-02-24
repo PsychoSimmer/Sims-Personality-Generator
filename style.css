@@ -1,5 +1,5 @@
 .container {
-width:600px;
+max-width:600px;
 background-color:greenyellow;
 margin:100px auto;
 font-family: 'Oxygen', sans-serif;
@@ -75,4 +75,10 @@ h2{
 .results div{
     clear:both;
     padding:10px;
+}
+
+.extratrait{
+    width:45px;
+    vertical-align:middle;
+
 }
