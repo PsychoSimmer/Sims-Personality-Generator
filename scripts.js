@@ -416,7 +416,7 @@ function triggertraits() {
     else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs")
     text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img title=\"Favorite Animal: Bugs\" class=\"extratrait\" src=\"Bugs.png\"> = 40% chance of wanting to be a bug scientist.<br>"
 
-    else if (roomtheme1.includes("Science") || roomtheme2.includes("Science")) && cowardorhatesoutdoors.includes("hates")
+    else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && cowardorhatesoutdoors.includes("hates"))
     text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img class=\"extratrait\" src=\"trait_hates_the_outdoors.png\">= 40% chance of being a computer whiz.<br>"
 
     else if (roomtheme1.includes("Science") || roomtheme2.includes("Science"))
