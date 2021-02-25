@@ -300,7 +300,7 @@ function calculatedesiredroomthemes() {
         roomtheme = "Army"
     }
     if (gender === "male" && desiredroomthemesnumber > .875) {
-        roomtheme = "Tools/Handiness"
+        roomtheme = "Supernatural"
     }
     //if female
     if (gender === "female" && desiredroomthemesnumber < .125) {
@@ -322,7 +322,7 @@ function calculatedesiredroomthemes() {
         roomtheme = "Fairies/Butterflies"
     }
     if (gender === "female" && desiredroomthemesnumber > .75 && desiredroomthemesnumber < .875) {
-        roomtheme = "Flowers"
+        roomtheme = "Supernatural"
     }
     if (gender === "female" && desiredroomthemesnumber > .875) {
         roomtheme = "Princesses"
@@ -416,6 +416,9 @@ function triggertraits() {
     else if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs")
     text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img title=\"Favorite Animal: Bugs\" class=\"extratrait\" src=\"Bugs.png\"> = 40% chance of wanting to be a bug scientist.<br>"
 
+    else if (roomtheme1.includes("Science") || roomtheme2.includes("Science")) && cowardorhatesoutdoors.includes("hates")
+    text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> + <img class=\"extratrait\" src=\"trait_hates_the_outdoors.png\">= 40% chance of being a computer whiz.<br>"
+
     else if (roomtheme1.includes("Science") || roomtheme2.includes("Science"))
         text = text + "<img title=\"Desired Room Theme: Science\" class=\"extratrait\" src=\"science.png\"> = 30% chance of wanting to be a scientist.<br>"
 
@@ -455,7 +458,12 @@ function triggertraits() {
         if (extrovert.includes("humor") && selfesteem.includes("flirty"))
         text = text + "<img class=\"extratrait\" src=\"trait_good_sense_of_humor.png\"> + <img class=\"extratrait\" src=\"trait_flirty.png\"> = High chance of the person they like liking them back!<br>"
 
-
+        if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")))
+        text = text + "<img title=\"Desired Room Theme: Supernatural\" class=\"extratrait\" src=\"trait_supernatural.png\"> = 30% Chance of wanting to become a supernatural if not already.<br>"
+    
+        if ((roomtheme1.includes("Army") || roomtheme2.includes("Army")))
+        text = text + "<img title=\"Desired Room Theme: Army\" class=\"extratrait\" src=\"army.png\"> = 40% Chance of wanting to join the military career track.<br>"
+    
     //return the chosen texts
     return text
 }
