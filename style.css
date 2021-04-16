@@ -85,18 +85,22 @@ h2{
     vertical-align:middle;
 
 }
-.download-link p {
-    width: 200px;
+.download-link div {
+    width: 250px;
     position: fixed;
-    background-color: rgb(170, 225, 175);
     top: 450px;
     transform: translateX(650px);
+    text-align: center;
+}
+
+.downloadbutton {
+    background-color: rgb(170, 225, 175);
     padding: 15px;
     border-radius: 30px;
     font-size: x-large;
     font-family: 'Oxygen', sans-serif;
     color: purple;
-
+    margin: 0.25em;
 }
 
 .download-link {
@@ -108,4 +112,8 @@ h2{
 
 .download-link p a{
     text-decoration: none;
+}
+
+.downloadicon {
+    color:rgb(205, 235, 160);
 }
