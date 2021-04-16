@@ -473,7 +473,7 @@ function triggertraits() {
         
 //supernaturals
 if (((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && animal == "Dog"))
-text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"trait_Dog_Person.png\"> = 70% chance of wanting to be a werewolf.<br>"
+text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"Trait_Dog_Person.png\"> = 70% chance of wanting to be a werewolf.<br>"
     else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && (roomtheme1.includes("Fairies") || roomtheme2.includes("Fairies")))
     text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"fairies.png\"> = 70% chance of wanting to be a fairy.<br>"
     else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && animal === "Horse")
