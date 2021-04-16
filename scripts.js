@@ -477,7 +477,9 @@ text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img 
     else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && (roomtheme1.includes("Fairies") || roomtheme2.includes("Fairies")))
     text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"fairies.png\"> = 70% chance of wanting to be a fairy.<br>"
     else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && animal === "Horse")
-    text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"trait_Equestrian.png\"> = <img class=\"extratrait\" src=\"unicorn.png\">70% chance of wanting to be the \"The Fairy Tale Finder\" (Lifetime Wish).<br>"
+    text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"Trait_Equestrian.png\"> = <img class=\"extratrait\" src=\"unicorn.png\">70% chance of wanting to be the \"The Fairy Tale Finder\" (Lifetime Wish).<br>"
+    else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")) && ((roomtheme1.includes("Nautical") || roomtheme2.includes("Nautical"))))
+    text = text + "<img class=\"extratrait\" src=\"trait_supernatural.png\"> + <img class=\"extratrait\" src=\"Trait_Equestrian.png\"> = <img class=\"extratrait\" src=\"unicorn.png\">70% chance of wanting to be the \"The Fairy Tale Finder\" (Lifetime Wish).<br>"
     else if ((roomtheme1.includes("Supernatural") || roomtheme2.includes("Supernatural")))
     text = text + "<img title=\"Desired Room Theme: Supernatural\" class=\"extratrait\" src=\"trait_supernatural.png\"> = 40% Chance of wanting to become a supernatural if not already.<br>"
 
@@ -490,7 +492,7 @@ text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\
         //adding more!!!
 
         if (animal == "Horse")
-        text = text + "<img class=\"extratrait\" src=\"trait_Equestrian.png\"> = 50% Chance of wanting to be an Equestrian.<br>"
+        text = text + "<img class=\"extratrait\" src=\"Trait_Equestrian.png\"> = 50% Chance of wanting to be an Equestrian.<br>"
 
         if (grumpyOrRebellious.includes("rebellious") && braveoradventurous.includes("adventurous"))
         text = text + "<img class=\"extratrait\" src=\"trait_rebellious.png\"> + <img class=\"extratrait\" src=\"trait_adventurous.png\"> = 50% chance of wanting to travel right after high school.<br>"
@@ -529,10 +531,10 @@ text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\
         text = text + "<img class=\"extratrait\" src=\"rainbow.png\"> + <img class=\"extratrait\" src=\"trait_grumpy.png\">= 30% chance of having depression/anxiety about who they are. Must proceed lovingly!<br>"
 
         if ((roomtheme1.includes("Sports") || roomtheme2.includes("Sports")) && (starorfamily.includes("star")))
-        text = text + "<img class=\"extratrait\" src=\"trait_Athletic.png\"> + <img class=\"extratrait\" src=\"trait_star_quality.png\">= <img class=\"extratrait\" src=\"acrobat.png\">40% chance of wanting to be an acrobat.<br>"
+        text = text + "<img class=\"extratrait\" src=\"Trait_Athletic.png\"> + <img class=\"extratrait\" src=\"trait_star_quality.png\">= <img class=\"extratrait\" src=\"acrobat.png\">40% chance of wanting to be an acrobat.<br>"
 
         if ((roomtheme1.includes("Sports") || roomtheme2.includes("Sports")))
-        text = text + "<img class=\"extratrait\" src=\"trait_Athletic.png\"> = <img class=\"extratrait\" src=\"superstarathlete.png\">20% Chance of wanting to be a professional athlete.<br>"
+        text = text + "<img class=\"extratrait\" src=\"Trait_Athletic.png\"> = <img class=\"extratrait\" src=\"superstarathlete.png\">20% Chance of wanting to be a professional athlete.<br>"
     
         
     
