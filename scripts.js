@@ -422,19 +422,19 @@ function triggertraits() {
         text = text + "<img class=\"extratrait\" src=\"trait_loser.png\"> = 60% chance of not going to college.<br>"
 
     if (animal == "Cat" && introvert.includes("loner"))
-        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
+        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"Trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
 
     if (animal == "Cat" && introvert.includes("grumpy"))
-        text = text + "<img class=\"extratrait\" src=\"trait_grumpy.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
+        text = text + "<img class=\"extratrait\" src=\"trait_grumpy.png\"> + <img class=\"extratrait\" src=\"Trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
 
     if (animal == "Cat" && introvert.includes("shy"))
-        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
+        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"Trait_Cat_Person.png\"> = 60% chance of being a lonely cat person.<br>"
 
     if (animal == "Cat" && introvert.includes("loner") && normietrait1.includes("slob"))
-        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 70% chance of being a lonely cat person.<br>"
+        text = text + "<img class=\"extratrait\" src=\"trait_loner.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"Trait_Cat_Person.png\"> = 70% chance of being a lonely cat person.<br>"
 
     if (animal == "Cat" && introvert.includes("shy") && normietrait1.includes("slob"))
-        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"trait_Cat_Person.png\"> = 70% chance of being a lonely cat person.<br>"
+        text = text + "<img class=\"extratrait\" src=\"trait_shy.png\"> + <img class=\"extratrait\" src=\"trait_slob.png\"> + <img class=\"extratrait\" src=\"Trait_Cat_Person.png\"> = 70% chance of being a lonely cat person.<br>"
 
     //scientist
     if ((roomtheme1.includes("Science") || roomtheme2.includes("Science")) && animal == "Bugs" && selfesteem.includes("Disciplined"))
