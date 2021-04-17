@@ -410,9 +410,9 @@ function triggertraits() {
     if (starorfamily.includes("star"))
         text = text + "<img class=\"extratrait\" src=\"trait_star_quality.png\"> = 20% Chance of having the talent to be famous. Talents should be nurtured but don't be pushy!<br>"
     if ((roomtheme1.includes("Music") || roomtheme2.includes("Music")))
-        text = text + "<img class=\"extratrait\" <img title=\"Desired Room Theme: Music\" src=\"trait_Virtuoso.png\"> = 30% Chance of being musically inclined. Natural talents must be nurtured!<br>"
+        text = text + "<img class=\"extratrait\" <img title=\"Desired Room Theme: Music\" src=\"Trait_Virtuoso.png\"> = 30% Chance of being musically inclined. Natural talents must be nurtured!<br>"
     if ((roomtheme1.includes("Music") || roomtheme2.includes("Music")) && starorfamily.includes("star"))
-        text = text + "<img class=\"extratrait\" <img title=\"Desired Room Theme: Music\" src=\"trait_Virtuoso.png\"> + <img class=\"extratrait\" src=\"trait_star_quality.png\">= 40% Chance of having what it takes to be a famous musician.<br>"
+        text = text + "<img class=\"extratrait\" <img title=\"Desired Room Theme: Music\" src=\"Trait_Virtuoso.png\"> + <img class=\"extratrait\" src=\"trait_star_quality.png\">= 40% Chance of having what it takes to be a famous musician.<br>"
 
     //depression    
     if (grumpyOrRebellious.includes("grumpy") && selfdoubt.includes("loser"))
